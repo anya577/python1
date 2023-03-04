@@ -10,8 +10,7 @@ def q_e_solver(a,b,c):
         return x
     else:
         x1=(-b+sqrt(d))/(2*a)
-        x2=(-b-sqrt(d))/(2*a)        
-
+        x2=(-b-sqrt(d))/(2*a)      
     
     return x1, x2
 
