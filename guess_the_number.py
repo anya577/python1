@@ -20,8 +20,7 @@ def guess_the_number_user(lower_bound, higher_bound):
         if user_guess<number_to_guess:
             print ("the number is small, try higher: ")
         elif user_guess>number_to_guess:
-            print ("the number is high, try smaller: ")
-      
+            print ("the number is high, try smaller: ")      
 
     print(f"You win {number_to_guess} in {trials_amount} trials")
 
