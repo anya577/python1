@@ -13,6 +13,7 @@ def guess_the_number_user(lower_bound, higher_bound):
     user_guess = math.inf
     trials_amount = 0    
 
+    
     while number_to_guess != user_guess:
         trials_amount=trials_amount+1
         user_guess = int(input(f"Guess the number between {lower_bound} and {higher_bound}: "))
@@ -23,5 +24,6 @@ def guess_the_number_user(lower_bound, higher_bound):
       
 
     print(f"You win {number_to_guess} in {trials_amount} trials")
+
 guess_the_number_user(lower_bound, higher_bound)
    
