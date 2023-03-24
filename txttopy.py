@@ -1,5 +1,6 @@
 to_read = open('txttopy.txt', 'r' )
 
+
 # data = to_read.readline()
 #data=to_read.readlines()
 data=to_read.read().splitlines() 
