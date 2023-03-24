@@ -9,25 +9,33 @@ def main():
     
     game_mode = int(input("Choose game mode \n User guess the number, press 1\n Computer guess the number, press 2 \n  " ))
 
-# 1st-human-guess mode    
+# 1-human-guess mode    
     lower_bound =int(input("please enter the lower bound: "))
     higher_bound = int(input("please enter the higher bound: "))
+   
 
     if game_mode == 1:
         guess_the_number_user(lower_bound, higher_bound)
     elif game_mode == 2:
             guess_the_number_computer(lower_bound, higher_bound)
    
-       
+# game-mode wrong symbol:
     
-       
-    return 0    
+    # mode_mistake = string(input('choose only from 1 or 2 '))    
+    # if mode_mistake !=1 or mode_mistake !=2:
+    #     print('choose only from 1 or 2 ')
+
+    
+    main()
+    return 0
+         
+  
 
 
 def guess_the_number_user(lower_bound, higher_bound):
     number_to_guess = randrange(lower_bound, higher_bound)
 
-#inf_to make it difficult for a user to guess the number at once
+# infinity assignment 
     user_guess = math.inf
     trials_amount = 0 
           
@@ -38,7 +46,9 @@ def guess_the_number_user(lower_bound, higher_bound):
         if user_guess<number_to_guess:
             print ("the number is small, try higher: ")
         elif user_guess>number_to_guess:
-            print ("the number is high, try smaller: ")     
+            print ("the number is high, try smaller: ")    
+        elif user_guess<lower_bound:
+            print ('number must be between lower and higher numbers')     
 
     print(f"Congratulations! You win {number_to_guess} in {trials_amount} trials")
 
@@ -53,7 +63,7 @@ def guess_the_number_user(lower_bound, higher_bound):
 
         
         
-#2nd  mode: number is guessed by a comp   
+#2- mode: number is guessed by a comp   
 
 def guess_the_number_computer(lower_bound, higher_bound):
     feedback = ' '
